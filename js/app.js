@@ -29,3 +29,48 @@ function goTo(pageId) {
   //then showing only the page with the specific id
   document.getElementById(pageId).style.display = 'block'
 }
+
+function instructionPopup() {
+  //getting the instructions button
+  const instructionsEl = document.getElementById('instructionsBtn')
+
+  //creating elements for the instructions box
+  const instructionBox = document.createElement('div')
+  const instructionsContent = document.createElement('div')
+  const title = document.createElement('h2')
+  const instructions = document.createElement('p')
+  const closeBtn = document.createElement('span')
+
+  //content of the instruction box
+  instructions.innerHTML = `
+    - Choose the level of difficulty<br>
+    - Guess the word by clicking on letters<br>
+    - You have 6 wrong guesses max<br>
+    - You have 90 seconds to guess the word<br>
+    - Win before the timer ends or you lose!
+  `
+
+  //assigning class name to each element
+  instructionBox.className = 'instructions-box'
+  instructionsContent.className = 'instructions-content'
+  closeBtn.className = 'close'
+  
+  //content
+  closeBtn.innerHTML = 'Close'
+  title.textContent = 'How To Play'
+
+  //when clicking the close button
+  closeBtn.onclick = () => {
+    instructionBox.style.display = 'none'
+  }
+
+  //appending
+  instructionsContent.append(title, instructions, closeBtn)
+  instructionBox.appendChild(instructionsContent)
+  document.body.appendChild(instructionBox)
+  
+  //clicking instructions button
+  instructionsEl.onclick = () => {
+    instructionBox.style.display = 'block'
+  }
+}
