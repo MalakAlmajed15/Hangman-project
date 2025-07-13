@@ -6,9 +6,11 @@
   <title>Hangman</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/app.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
+
 <body>
-  <div id="home-page">
+  <div id="home-page"> 
     <h1 class="title">HANGMAN</h1>
     <p class="hangman-photo-home"></p>  
     <div class="button-group">
@@ -22,8 +24,7 @@
   <button class="level1" onclick="startGame(1)">1</button>
   <button class="level2" onclick="startGame(2)">2</button>
   <button class="level3" onclick="startGame(3)">3</button>
-</div>
-
+  </div>
 
   <div id="game-page">
     <div class="game-box">
@@ -42,7 +43,6 @@
           <path id="right-leg" d="M130,110 L150,140" />
         </svg>
       </div>
-
       <div class="message" id="message"></div>
       <div class="word-display" id="word-display"></div>
       <div class="stats">
@@ -52,6 +52,7 @@
       <div class="keyboard"></div>
       <button class="btn" id="new-game-btn">New Game</button>
       <button class="btn" id="back-btn">Back to Levels</button>
+      <button class="btn" id="hint-btn">Hint</button>
     </div>
   </div>
 </body>
