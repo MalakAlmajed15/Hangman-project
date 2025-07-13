@@ -81,3 +81,13 @@ function resetHangmanDrawing() {
     document.getElementById(id).style.display = 'none'
   })
 }
+
+function showHangmanPart(wrongGuesses) {
+  if (wrongGuesses <= parts.length) {
+    const part = document.getElementById(parts[wrongGuesses - 1]);
+    //checks if the part is found and make it visible
+    if (part != null) {
+      part.style.display = 'inline'
+    }
+  }
+}
