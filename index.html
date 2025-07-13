@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hangman</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div id="home-page">
+    <h1 class="title">HANGMAN</h1>
+    <p class="hangman-photo-home"></p>  
+    <div class="button-group">
+      <button onclick="goTo('level-page')">PLAY</button>
+      <button id="instructionsBtn">INSTRUCTIONS</button>
+    </div>
+  </div>
+
+  <div id="level-page">
+  <h1>LEVELS</h1>
+  <button class="level1" onclick="startGame(1)">1</button>
+  <button class="level2" onclick="startGame(2)">2</button>
+  <button class="level3" onclick="startGame(3)">3</button>
+</div>
+
+
+  <div id="game-page">
+    <div class="game-box">
+  <p id="timer">Time: 60s</p>
+      <div class="hangman-container">
+        <svg class="hangman-drawing" viewBox="0 0 200 250">
+          <path id="base" d="M10,240 H190" />
+          <path id="pole" d="M50,240 V20" />
+          <path id="beam" d="M50,20 H130" />
+          <path id="rope" d="M130,20 V40" />
+          <circle id="head" cx="130" cy="50" r="10" />
+          <path id="body" d="M130,60 V110" />
+          <path id="left-arm" d="M130,70 L110,90" />
+          <path id="right-arm" d="M130,70 L150,90" />
+          <path id="left-leg" d="M130,110 L110,140" />
+          <path id="right-leg" d="M130,110 L150,140" />
+        </svg>
+      </div>
+
+      <div class="message" id="message"></div>
+      <div class="word-display" id="word-display"></div>
+      <div class="stats">
+        <div class="stat">Wins: <span id="wins">0</span></div>
+        <div class="stat">Wrong Guesses: <span id="wrong-guesses">0</span>/6</div>
+      </div>
+      <div class="keyboard"></div>
+      <button class="btn" id="new-game-btn">New Game</button>
+      <button class="btn" id="back-btn">Back to Levels</button>
+    </div>
+  </div>
+</body>
+</html>
