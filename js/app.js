@@ -161,3 +161,45 @@ function disableAllKeys() {
   const buttons = document.querySelectorAll('.keyboard button')
   buttons.forEach(btn => btn.disabled = true) //disable all buttons
 }
+
+function handleGuess(letter, buttonEl) {
+  buttonEl.disabled = true //disable the button when it's clicked
+
+  const wordLetters = currentWord.split('')
+  const letterEls = document.querySelectorAll('.letter')
+  let correct = false
+  
+  //reveal letter if correct
+  for (let i = 0; i < wordLetters.length; i++) {
+    if (wordLetters[i] == letter) {
+      letterEls[i].textContent = letter
+      correct = true
+    }
+  }
+
+  //wrong guesses
+  if (!correct) {
+    wrongGuesses++
+    document.getElementById('wrong-guesses').textContent = wrongGuesses //increase the wrong guesses
+    showHangmanPart(wrongGuesses)
+  }
+
+  const currentGuess = Array.from(letterEls).map(el => el.textContent).join('') //building the guessed word
+
+  if (currentGuess == currentWord){
+    wins++
+    clearInterval(timerInterval)
+    document.getElementById('wins').textContent = wins
+    document.getElementById('message').textContent = 'You Won🎉!'
+    confetti({
+    particleCount: 150,
+    spread: 90,
+    origin: { y: 0.6 }
+  })
+  disableAllKeys()
+  } else if (wrongGuesses >= 6) {
+    clearInterval(timerInterval)
+    document.getElementById('message').textContent = ` You Lost💀! The word was ${currentWord}`
+    disableAllKeys()
+  }
+}
