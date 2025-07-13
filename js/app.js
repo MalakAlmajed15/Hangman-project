@@ -126,3 +126,19 @@ function startGame(level) {
   goTo('game-page')
   startTimer()
 }
+
+function startTimer() {
+  const timerDisplay = document.getElementById('timer') //getting the element
+  timerDisplay.textContent = `Time: ${timeLeft}s` //showing that the time is 90sec
+
+  timerInterval = setInterval(() => {
+    timeLeft-- //decrease the time
+    timerDisplay.textContent = `Time: ${timeLeft}s`
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval)
+      disableAllKeys() //to disable the keyboard so that the user can't keep guessing
+      document.getElementById('message').textContent = ` Time's up⏱️! The word was ${currentWord}`
+    }
+  }, 1000)
+}
