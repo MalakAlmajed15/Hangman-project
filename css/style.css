@@ -57,3 +57,38 @@ body {
 .button-group button:hover {
   background-color: #b03576;
 }
+
+#level-page {
+  background-color: #e6a84f;
+  padding: 40px;
+  border: 10px solid #2c3e50;
+  border-radius: 10px;
+  text-align: center;
+  width: 90%;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#level-page h1 {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+
+#level-page button {
+  background-color: #d9438d;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  padding: 20px 30px;
+  font-size: 1.5em;
+  margin: 0 15px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#level-page button:hover {
+  background-color: #b03576;
+}
