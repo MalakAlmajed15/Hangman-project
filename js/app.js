@@ -91,3 +91,38 @@ function showHangmanPart(wrongGuesses) {
     }
   }
 }
+
+function startGame(level) {
+  //reset everything and start a new game
+  hintUsed = false
+  document.getElementById('hint-btn').disabled = false
+  currentLevel = level
+  wrongGuesses = 0
+  timeLeft = 90
+  clearInterval(timerInterval)
+  resetHangmanDrawing()
+
+  //reset the informations
+  document.getElementById('message').textContent = ''
+  document.getElementById('wrong-guesses').textContent = '0'
+  document.getElementById('timer').textContent = `Time: ${timeLeft}s`
+
+  //choosing a random word according to the level
+  const levelWords = words[level-1]
+  currentWord = levelWords[Math.floor(Math.random() * levelWords.length)].toUpperCase()
+
+  //displaying blanks according to the length of the word
+  const wordDisplay = document.getElementById('word-display')
+  wordDisplay.innerHTML = '' //clearing previous content
+  currentWord.split('').forEach(() => { //turns the word into an array of individual letters and then loops for each letter
+    const span = document.createElement('span')
+    span.textContent = '_'
+    span.classList.add('letter')//to style it
+    wordDisplay.appendChild(span)//adds the blanks
+  })
+  
+  //load game view
+  renderKeyboard()
+  goTo('game-page')
+  startTimer()
+}
