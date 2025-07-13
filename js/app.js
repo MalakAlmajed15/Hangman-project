@@ -142,3 +142,17 @@ function startTimer() {
     }
   }, 1000)
 }
+
+function renderKeyboard() {
+  const keyboardEl = document.querySelector('.keyboard') //getting the keyboard element
+  const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  keyboardEl.innerHTML = '' //clears the keyboard container
+
+  alphabet.split('').forEach(letter => {
+    const button = document.createElement('button') //keeping the letters in a button
+    button.textContent = letter
+    button.classList.add('key') //creating a class for the buttons
+    button.onclick = () => handleGuess(letter, button) //the letter that the user clicked and the button elemnts so that it can be disabled
+    keyboardEl.appendChild(button) //adds each button to the keyboard element
+  })
+}
