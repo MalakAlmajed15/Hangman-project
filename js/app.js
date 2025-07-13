@@ -19,3 +19,13 @@ const words = [
     'microscope', 'adventure', 'restaurant', 'chocolate', 'asteroids', 'knowledge', 'volunteer', 'telephone', 'direction', 'revolution'
   ]
 ]
+
+//changing the page
+function goTo(pageId) {
+  //first blocking all the pages so that non of them shows
+  document.getElementById('home-page').style.display = 'none'
+  document.getElementById('level-page').style.display = 'none'
+  document.getElementById('game-page').style.display = 'none'
+  //then showing only the page with the specific id
+  document.getElementById(pageId).style.display = 'block'
+}
