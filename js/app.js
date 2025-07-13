@@ -74,3 +74,10 @@ function instructionPopup() {
     instructionBox.style.display = 'block'
   }
 }
+
+function resetHangmanDrawing() {
+  //for each part in the hangman drawing (id represents each element of the svg) hide it
+  parts.forEach(id => {
+    document.getElementById(id).style.display = 'none'
+  })
+}
