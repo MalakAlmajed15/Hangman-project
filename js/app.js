@@ -156,3 +156,8 @@ function renderKeyboard() {
     keyboardEl.appendChild(button) //adds each button to the keyboard element
   })
 }
+
+function disableAllKeys() {
+  const buttons = document.querySelectorAll('.keyboard button')
+  buttons.forEach(btn => btn.disabled = true) //disable all buttons
+}
