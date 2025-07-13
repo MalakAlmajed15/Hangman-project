@@ -203,3 +203,36 @@ function handleGuess(letter, buttonEl) {
     disableAllKeys()
   }
 }
+
+let hintUsed = false //to allow only one hint per game
+
+document.getElementById('hint-btn').onclick = () => {
+  if (hintUsed == true) { //if the user have used the hint button
+    return
+  } 
+
+  const wordLetters = currentWord.split('');
+  const letterEls = document.querySelectorAll('.letter');
+
+  const unrevealedIndexes = [];
+  wordLetters.forEach((char, index) => {
+    if (letterEls[index].textContent == '_') { //if the letter is empty
+      unrevealedIndexes.push(index);
+    }
+  })
+  
+   if (unrevealedIndexes.length > 0) { //checks if there are any hidden letters left to reveal
+    const randomIndex = unrevealedIndexes[Math.floor(Math.random() * unrevealedIndexes.length)] //picks a random unrevealed letter
+    const hintLetter = wordLetters[randomIndex] //store it
+
+    const keyboardButtons = document.querySelectorAll('.keyboard button')
+    keyboardButtons.forEach(button => {
+      if (button.textContent == hintLetter && !button.disabled) { //finds the button that matches the hint letter
+        button.click() //shows that it has been clicked
+      }
+    })
+
+    hintUsed = true
+    document.getElementById('hint-btn').disabled = true
+  }
+}
