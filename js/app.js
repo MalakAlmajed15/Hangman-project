@@ -141,6 +141,7 @@ function startTimer() {
       document.getElementById('message').textContent = ` Time's up⏱️! The word was ${currentWord}`
     }
   }, 1000)
+  
 }
 
 function renderKeyboard() {
@@ -237,11 +238,19 @@ document.getElementById('hint-btn').onclick = () => {
   }
 }
 
+
+
+
+// function darkMode() {
+//   var element = document.body;
+//   element.classList.toggle("dark-mode");
+
+// }
 window.onload = () => {
   goTo('home-page') //navigate to the home page
   instructionPopup()
   document.getElementById('new-game-btn').onclick = () => startGame(currentLevel)
-  document.getElementById('back-btn').onclick = () => { //when the user clicks the back to level button
+  document.getElementById('back-btn').onclick = () => { //wheln the user clicks the back to level button
   clearInterval(timerInterval) //reset the time
   goTo('level-page') //go to level page
 }
