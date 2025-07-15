@@ -49,6 +49,7 @@ function instructionPopup() {
     - You have 90 seconds to guess the word<br>
     - Win before the timer ends or you lose!
   `
+  title.style.color = '#2c3e50'
 
   //assigning class name to each element
   instructionBox.className = 'instructions-box'
@@ -238,14 +239,6 @@ document.getElementById('hint-btn').onclick = () => {
   }
 }
 
-
-
-
-// function darkMode() {
-//   var element = document.body;
-//   element.classList.toggle("dark-mode");
-
-// }
 window.onload = () => {
   goTo('home-page') //navigate to the home page
   instructionPopup()
