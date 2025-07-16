@@ -2,6 +2,7 @@ let currentWord = ''
 let wins = 0
 let wrongGuesses = 0
 let timerInterval = null
+let hardTimerInterval
 const parts = ['head', 'body', 'left-arm', 'right-arm', 'left-leg', 'right-leg']
 
 //words according to level of difficulty
@@ -128,6 +129,7 @@ function startGame(level) {
   startTimer()
 }
 
+
 function startTimer() {
   const timerDisplay = document.getElementById('timer') //getting the element
   timerDisplay.textContent = `Time: ${timeLeft}s` //showing that the time is 90sec
@@ -142,6 +144,18 @@ function startTimer() {
       document.getElementById('message').textContent = ` Time's up⏱️! The word was ${currentWord}`
     }
   }, 1000)
+
+  if (startGame(level) == '3') {
+  hardTimer = 5
+  timerDisplay.textContent = `Time: ${hardTimer}s`
+  hardTimerInterval = setInterval(()=>{
+    hardTimer--
+
+    if(hardTimer == 0){
+      showHangmanPart()
+    }
+  },1000)
+  }
   
 }
 

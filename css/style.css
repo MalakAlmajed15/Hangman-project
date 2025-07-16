@@ -187,6 +187,7 @@ body {
   opacity: 0.6;
 }
 
+
 .wrong {
   background-color: #e84b8c;
 }
@@ -264,6 +265,11 @@ button:disabled,
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+}
+
+#hint-btn:disabled {
+  cursor: not-allowed;
+  transform: none;
 }
 
 .instructions-box {
