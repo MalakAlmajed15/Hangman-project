@@ -7,7 +7,7 @@ A fun and educational Hangman game developed using **HTML**, **CSS**, and **Java
 
 Play game here : [Hangman Game](https://malakalmajed15.github.io/Hangman-project/)
 
-Planning materials : [Plan]([Hangman_Game_Planning.pdf](https://github.com/user-attachments/files/21255706/Hangman_Game_Planning.pdf))
+Planning materials : [Plan](https://github.com/user-attachments/files/21255706/Hangman_Game_Planning.pdf)
 
 Attributions : [Confetti](https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js)
 
