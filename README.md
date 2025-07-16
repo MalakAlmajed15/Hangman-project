@@ -55,8 +55,9 @@ A fun and educational Hangman game developed using **HTML**, **CSS**, and **Java
    ```bash
    git clone https://github.com/malakalmajed15/hangman-game.git
 
+---
 
-🔧 Gameplay Enhancements
+## 🔧 Gameplay Enhancements
 1. 🔠 Word Categories
 
 - Let users choose categories (e.g., Animals, Food, Countries).
