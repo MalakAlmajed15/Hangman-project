@@ -1,7 +1,15 @@
 # 🕹️ Hangman Game
 
 A fun and educational Hangman game developed using **HTML**, **CSS**, and **JavaScript**. This version includes multiple difficulty levels, a countdown timer, a hint feature, and a responsive UI.  
-🧑‍🏫 Built during the **General Assembly Bahrain** training program.
+🧑‍🏫 Built during the **General Assembly Bahrain** training program. I chose the Hangman game because it’s fun, educational, and a great way to practice JavaScript. It helped me improve my skills in logic, DOM manipulation, and user interaction while building something engaging and interactive.
+
+---
+
+Play game here : [Hangman Game](https://malakalmajed15.github.io/Hangman-project/)
+
+Planning materials : [Plan]([Hangman_Game_Planning.pdf](https://github.com/user-attachments/files/21255706/Hangman_Game_Planning.pdf))
+
+Attributions : [Confetti](https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js)
 
 ---
 
@@ -52,3 +60,36 @@ A fun and educational Hangman game developed using **HTML**, **CSS**, and **Java
 ## 🖼️ Screenshots
 
 <img width="887" height="890" alt="Image" src="https://github.com/user-attachments/assets/fea55a3d-9c43-4c00-b30a-5ecca7eca830" />
+
+--
+
+## 🚀 Next Steps: Planned Future Enhancements (Stretch Goals)
+- Dark Mode Toggle
+Allow players to switch between light and dark themes for better accessibility and user comfort.
+
+- Category Selection
+Let users choose word categories (e.g., Animals, Countries, Food) for a more personalized experience.
+
+- Multiplayer Mode
+Add a feature where two players can take turns guessing or challenging each other with custom words.
+
+- Score System
+Introduce a scoring mechanism based on time taken and remaining lives to encourage competition.
+
+- Sound Effects and Music
+Add background music and sound effects for key actions like correct guesses, wrong guesses, and wins.
+
+- Responsive Animations
+Use CSS animations or GSAP to animate game transitions, button clicks, and hangman drawing steps.
+
+- Mobile Optimization Enhancements
+Refine UI for better usability and layout on smaller screens.
+
+- Custom Word Input
+Allow users to input their own words and play in a private mode with friends.
+
+- Leaderboard
+Save high scores in localStorage or a backend database and display a leaderboard.
+
+- Accessibility Improvements
+Add keyboard navigation, ARIA labels, and better color contrast for inclusive design.
