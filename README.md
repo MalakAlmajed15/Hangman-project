@@ -51,10 +51,4 @@ A fun and educational Hangman game developed using **HTML**, **CSS**, and **Java
 
 ## 🖼️ Screenshots
 
-> 📸 Add screenshots here to showcase the game
-
-You can include them like this:
-
-```markdown
-![Home Page](assets/screenshots/home-page.png)
-![Gameplay](assets/screenshots/gameplay.png)
+<img width="887" height="890" alt="Image" src="https://github.com/user-attachments/assets/fea55a3d-9c43-4c00-b30a-5ecca7eca830" />
