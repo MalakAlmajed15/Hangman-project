@@ -2,7 +2,6 @@ let currentWord = ''
 let wins = 0
 let wrongGuesses = 0
 let timerInterval = null
-let hardTimerInterval
 const parts = ['head', 'body', 'left-arm', 'right-arm', 'left-leg', 'right-leg']
 
 //words according to level of difficulty
