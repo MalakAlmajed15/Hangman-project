@@ -54,3 +54,37 @@ A fun and educational Hangman game developed using **HTML**, **CSS**, and **Java
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/malakalmajed15/hangman-game.git
+
+
+🔧 Gameplay Enhancements
+1. 🔠 Word Categories
+
+- Let users choose categories (e.g., Animals, Food, Countries).
+
+- Filter word lists based on category selection.
+
+2. 🧩 Custom Word Mode
+
+- Let players input their own word and challenge a friend to guess it.
+
+3. ⏱️ Per-Letter Countdown (Hard Mode)
+
+- Add a timer for each letter guess (e.g., 5 seconds to click a letter).
+
+4. 🪙 Scoring System
+
+- Award points for correct guesses.
+
+- Bonus for fast wins or unused hints.
+
+5. 🧠 Power-Ups
+
+- Reveal a vowel
+
+- Skip a wrong guess
+
+- Extend timer by 10 seconds
+
+6. 🧾 Word Definition Pop-Up
+
+- After each word is guessed, show its definition using an API (e.g., Dictionary API).
