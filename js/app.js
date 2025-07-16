@@ -143,18 +143,6 @@ function startTimer() {
       document.getElementById('message').textContent = ` Time's up⏱️! The word was ${currentWord}`
     }
   }, 1000)
-
-  if (startGame(level) == '3') {
-  hardTimer = 5
-  timerDisplay.textContent = `Time: ${hardTimer}s`
-  hardTimerInterval = setInterval(()=>{
-    hardTimer--
-
-    if(hardTimer == 0){
-      showHangmanPart()
-    }
-  },1000)
-  }
   
 }
 
