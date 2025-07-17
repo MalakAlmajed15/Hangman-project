@@ -59,7 +59,7 @@ Attributions : [Confetti](https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dis
 
 ## 🖼️ Screenshots
 
-<img width="887" height="890" alt="Image" src="https://github.com/user-attachments/assets/fea55a3d-9c43-4c00-b30a-5ecca7eca830" />
+<img width="916" height="927" alt="Image" src="https://github.com/user-attachments/assets/f6086279-f5dc-4593-9871-d788bdd8dd98" />
 
 --
 
